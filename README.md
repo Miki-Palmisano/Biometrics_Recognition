@@ -1,6 +1,6 @@
 ## DATASET USATI
-https://www.kaggle.com/datasets/monareyhanii/casia-iris-syn/data
-https://www.kaggle.com/datasets/ouaraskhelilrafik/iris-images/data
+https://www.kaggle.com/datasets/monareyhanii/casia-iris-syn/data <br>
+https://www.kaggle.com/datasets/ouaraskhelilrafik/iris-images/data <br>
 https://www.kaggle.com/datasets/ouaraskhelilrafik/iris-images/data, Paper: https://www.kaggle.com/datasets/ouaraskhelilrafik/iris-images/data
 
 
