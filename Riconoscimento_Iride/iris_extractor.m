@@ -3,7 +3,7 @@ folder = "050";
 imageN = "3";
 imageC = "6";
 %% Importa immagine
-image_path = './iris_images/iris49_56/left/'+folder+'L_'+imageN+'.png';
+image_path = "path";
 %converto in grayscale
 AIris = rgb2gray(imread(image_path));
 imshow(AIris);
@@ -122,9 +122,3 @@ end
 figure;
 imshow(uint8(AIris_cord));
 title('Iride trasformata in coordinate polari');
-
-if ~exist("./iris-converted/"+folder, 'dir')
-    mkdir("./iris-converted/"+folder)
-    fprintf('Cartella creata con successo.');
-end
-imwrite(uint8(AIris_cord), './iris-converted/'+folder+'/'+imageC+'.jpg');
