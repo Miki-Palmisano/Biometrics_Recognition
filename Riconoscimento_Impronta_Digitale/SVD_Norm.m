@@ -3,7 +3,7 @@ clear all, close all, clc
 
 n_person = 50;
 n_finger = 10;
-base_path = "./socofing/SOCOFing/Real/";
+base_path = "path";
 %% Elaboro la matrice delle impronte
 
 AIfing_matrix = [];
@@ -11,7 +11,7 @@ AIfing_matrix = [];
 for i = 1: (n_person - 5)
 
     for j = 1:n_finger
-        img_path = base_path + i + "_" + j + ".BMP";
+        img_path = base_path;
 
         AIfing = imread(img_path);
         AIfing = double(rgb2gray(AIfing));
@@ -75,12 +75,12 @@ tic;
 TP = 0;
 FP = 0;
 
-base_path = "./socofing/SOCOFing/Altered/Altered-Easy/";
+base_path = "path";
 
 for i=1:(n_person - 5)
     
     for l=1:10
-        AIfing_test = double(imread(base_path + i + "_" + l + "_Obl.BMP"));
+        AIfing_test = base_path;
 
         %AIris_test = (AIris_test - mean(AIris_test(:))) / std(AIris_test(:));
         AIfing_test = AIfing_test(:) - mean_AIfing;
@@ -169,7 +169,7 @@ title('Matrice di correlazione delle impronte');
 colormap jet;
 %% Prendo un immagine dal set di test confrontando con singolo campione
 %{
-base_path = "./socofing/SOCOFing/Real/50_1.BMP";
+base_path = "path";
 
 AIfing_test = double(rgb2gray(imread(base_path)));
 
@@ -199,7 +199,7 @@ plot(percentage_distances)
 
 AIfing_test_matrix = [];
 for i=46:50
-    test_path = "./socofing/SOCOFing/Real/"+i + "_1.BMP";
+    test_path = "path";
 
     AIfing_test = imread(test_path);
 
