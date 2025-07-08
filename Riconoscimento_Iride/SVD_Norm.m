@@ -3,19 +3,12 @@ clear all, close all, clc
 
 n_person = 45;
 n_iris = 6;
-base_path = './iris-converted/';
+base_path = "path";
 %% Elaboro la matrice degli iridi
 
 AIris_matrix = [];
 
 for i = 1:n_person
-    if i < 10
-        directory = base_path + "00" + i + "/";
-    elseif i < 100
-        directory = base_path + "0" + i + "/";
-    else
-        directory = base_path + i + "/";
-    end
 
     for j = 1:(n_iris-1)
         img_path = directory + j + ".jpg";
@@ -69,12 +62,6 @@ TP = 0;
 FP = 0;
 
 for j=1:n_person
-    if j < 10
-        test_path = base_path+"00"+j+"/6.jpg";
-    else
-        test_path = base_path+"0"+j+"/6.jpg";
-    end
-    
 
     AIris_test = double(imread(test_path));
 
@@ -174,7 +161,7 @@ colormap jet;
 
 %% Prendo un immagine dal set di test per confronto con singolo campione
 %{
-test_path = './iris-converted/050/6.jpg';
+test_path = "path";
 
 AIris_test = double(imread(test_path));
 
@@ -209,7 +196,7 @@ plot(percentage_distances)
 
 AIris_test_matrix = [];
 for i=46:50
-    test_path = "./iris-converted/0"+i+"/6.jpg";
+    test_path = "path";
 
     AIris_test = double(imread(test_path));
     AIris_test = AIris_test(:) - mean_AIris;
